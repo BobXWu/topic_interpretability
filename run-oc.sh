@@ -22,6 +22,7 @@ ref_corpus_dir=${2}
 # oc_file="results/topics-oc.txt"
 
 window_size=20
+# window_size=50
 
 wordcount_file=`dirname ${topic_file}`/wc_`basename ${topic_file}`
 
