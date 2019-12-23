@@ -12,7 +12,6 @@ args = parser.parse_args()
 with open(args.data_path) as file:
     texts = file.read().splitlines()
 
-new_texts = []
 with open(args.output_path, 'w') as file:
     for text in texts:
         tokens = jieba.cut(text)
