@@ -137,10 +137,12 @@ topic_tw = {} #{topicid: topN_topicwords}
 
 with open(args.topic_file) as topic_file:
     for topic_id, line in enumerate(topic_file):
-        topic_list = line.split()[:max(args.topns)]
+        # topic_list = line.split()[:max(args.topns)]
+        topic_list = line.split()
         topic_tw[topic_id] = " ".join(topic_list)
-        for n in args.topns:
-            topic_coherence[topic_id].append(calc_topic_coherence(topic_list[:n]))
+        # for n in args.topns:
+            # topic_coherence[topic_id].append(calc_topic_coherence(topic_list[:n]))
+        topic_coherence[topic_id].append(calc_topic_coherence(topic_list))
 
 #sort the topic coherence scores in terms of topic id
 tc_items = sorted(topic_coherence.items())

@@ -37,4 +37,4 @@ echo "Computing the observed coherence..."
 python src/ComputeObservedCoherence.py ${topic_file} ${metric} ${wordcount_file}
 # > $oc_file
 
-# rm ${wordcount_file}
+rm ${wordcount_file}
