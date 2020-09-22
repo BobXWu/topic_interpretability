@@ -28,6 +28,8 @@ wordcount_file=`dirname ${topic_file}`/wc_`basename ${topic_file}`
 
 touch ${wordcount_file}
 
+# echo ${wordcount_file}
+
 #compute the word occurrences
 echo "Computing word occurrence..."
 python src/ComputeWordCount.py ${topic_file} ${ref_corpus_dir} ${wordcount_file} ${window_size} #> ${wordcount_file}
