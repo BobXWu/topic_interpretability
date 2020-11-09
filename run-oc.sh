@@ -15,7 +15,6 @@ topic_file=${1}
 ref_corpus_dir=${2}
 
 # ref_corpus_dir="ref_corpus/wikipedia"
-# ref_corpus_dir="../MultiLingual/data/wiki_shorts2/train_texts_cn"
 
 #output
 # wordcount_file="wordcount/wc-oc.txt"
@@ -27,8 +26,6 @@ window_size=20
 wordcount_file=`dirname ${topic_file}`/wc_`basename ${topic_file}`
 
 touch ${wordcount_file}
-
-# echo ${wordcount_file}
 
 #compute the word occurrences
 echo "Computing word occurrence..."
